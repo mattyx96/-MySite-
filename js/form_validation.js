@@ -20,10 +20,12 @@ function validate() {
         url: 'http://matteoomicini.drink-web.eu/api/new-comment',
         type: 'POST',
         contentType: 'application/json',
-        data: json,
+        data: JSON.stringify(json),
         crossDomain:true,
         success: function () {
-            alert('success');
+            alert('comment sent, take a look!');
+            comment.val("");
+            sender.val("");
         },
         error: function () {
             alert('error');
