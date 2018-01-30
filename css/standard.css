@@ -58,8 +58,25 @@ body {
 
 }
 
-.nav-item{
+hr{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 0;
+}
 
+form{
+    background-color:#E6E23C;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.form-control{
+    background: #f6e58d;
+    border-color: transparent;
+}
+
+label{
+    font-family: Delicious;
 }
 
 #icons{;
@@ -140,13 +157,13 @@ body {
 }
 
 #description {
-    padding: 35px;
+    padding: 20px;
     background: #1abc9c;
 }
 
 #skills {
     background: #9b59b6;
-    padding: 35px;
+    padding: 20px;
 }
 
 #footer {

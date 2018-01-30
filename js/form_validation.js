@@ -1,6 +1,6 @@
 function validate() {
-    var comment = $("#TextArea").value;
-    var sender = $("#Sender").value;
+    var comment = $("#TextArea").val();
+    var sender = $("#Sender").val();
 
     if (comment == "") {
         alert("il commento non deve essere vuoto");
@@ -14,22 +14,19 @@ function validate() {
 
     console.log(json);
 
-        $.ajax({
-            url: 'http://matteoomicini.drink-web.eu/api/new-comment',
-            type: 'POST',
-            contentType: 'application/json',
-            data: JSON.stringify( json ),
-            success: function(){
-                alert('success');
-            },
-            error: function(){
-                alert('error');
-            }
-        });
 
 
-    // var xhttp = new XMLHttpRequest();
-    // xhttp.open("POST", "", true);
-    // xhttp.setRequestHeader("Content-type", json);
-    // xhttp.send();
+    $.ajax({
+        url: 'http://matteoomicini.drink-web.eu/api/new-comment',
+        type: 'POST',
+        contentType: 'application/json',
+        data: json,
+        crossDomain:true,
+        success: function () {
+            alert('success');
+        },
+        error: function () {
+            alert('error');
+        }
+    });
 }
