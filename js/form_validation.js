@@ -24,8 +24,8 @@ function validate() {
         crossDomain:true,
         success: function () {
             alert('comment sent, take a look!');
-            comment.val("");
-            sender.val("");
+            $("#TextArea").val("");
+            $("#Sender").val("");
         },
         error: function () {
             alert('error');

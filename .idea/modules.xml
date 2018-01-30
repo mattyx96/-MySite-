@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../PHP/MySite-ServerSide-master/MySite-ServerSide-master/.idea/MySite-ServerSide.iml" filepath="$PROJECT_DIR$/../../PHP/MySite-ServerSide-master/MySite-ServerSide-master/.idea/MySite-ServerSide.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/sitomio.iml" filepath="$PROJECT_DIR$/.idea/sitomio.iml" />
     </modules>
   </component>
