@@ -3,23 +3,31 @@ function validate() {
     var comment = $("#TextArea").val();
     var sender = $("#Sender").val();
     var ip;
+    var adblock = false;
 
     fetch('https://freegeoip.net/json/', {headers: {}})
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(data) {
+            ip = data.ip;
+        })
+        .catch(function(error) {
+            console.log(error);
+            adblock = true;
+            alert("please disable your adblock and retry");
+            return Promise.reject();
 
-        .then(function (data) {
-
-            return data.json();
-
-        }).then(function (data) {
-
-        ip = data.ip;
-
-    }).then(function () {
+        }).then(function () {
 
         const json = {
             comment: comment,
             sender: sender,
             address: ip
+        }
+
+        if (adblock){
+            return;
         }
 
         console.log(json);
@@ -42,8 +50,3 @@ function validate() {
     });
 
 }
-
-
-
-
-
