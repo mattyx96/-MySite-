@@ -1,27 +1,31 @@
 function toItalian() {
-    document.getElementById("header_comments").textContent="Commenti";
-    document.getElementById("header_write_comment").textContent="Scrivi un commento";
-    document.getElementById("dropdownMenuButton").textContent="Tema";
-    document.getElementById("arancio").textContent="Arancio";
-    document.getElementById("legno").textContent="Legno";
-    document.getElementById("desc_1").textContent="Benvenuto!";
-    document.getElementById("desc_2").textContent="Mi chiamo Matteo, sono uno studente universitario e uno sviluppatore software.";
-    document.getElementById("desc_3").textContent="Mi piace cimentarmi sia nel front-end sia nel back-end e mi piace lavorare in team. Sono aperto a qualunque linguaggio di programmazione/framework e imparo in fretta! \n";
-    document.getElementById("desc_4").textContent="Adoro e seguo tutto quel che riguarda la tecnologia dall'hardware al software, mi piace e mi affascina il design.";
-    document.getElementById("desc_5").textContent="(Lascia un commento";
-    document.getElementById("desc_6").textContent="anche anonimo";
-    document.getElementById("desc_7").textContent="qui in basso!)";
-    document.getElementById("collapseButton1").textContent="Mostra Altro";
-    document.getElementById("collapseButton2").textContent="Nascondi";
-    document.getElementById("form_write_comment").textContent="Scrivi un commento!";
-    document.getElementById("form_write_sender").placeholder="Mittente";
-    document.getElementById("TextArea").placeholder="Commento";
+    document.getElementById("header_comments").textContent = "Commenti";
+    document.getElementById("header_write_comment").textContent = "Scrivi un commento!";
+    document.getElementById("dropdownMenuButton").textContent = "Tema";
+    document.getElementById("arancio").textContent = "Arancio";
+    document.getElementById("legno").textContent = "Legno";
+    document.getElementById("desc_1").textContent = "Benvenuto!";
+    document.getElementById("desc_2").textContent = "Mi chiamo Matteo, sono uno studente universitario e uno sviluppatore software.";
+    document.getElementById("desc_3").textContent = "Mi piace cimentarmi sia nel front-end sia nel back-end e mi piace lavorare in team. Sono aperto a qualunque linguaggio di programmazione/framework e imparo in fretta! \n";
+    document.getElementById("desc_4").textContent = "Adoro e seguo tutto quel che riguarda la tecnologia dall'hardware al software, mi piace e mi affascina il design.";
+    document.getElementById("desc_5").textContent = "(Lascia un commento";
+    document.getElementById("desc_6").textContent = "anche anonimo";
+    document.getElementById("desc_7").textContent = "qui in basso!)";
+    document.getElementById("collapseButton1").textContent = "Mostra Altro";
+    document.getElementById("collapseButton2").textContent = "Nascondi";
+    document.getElementById("form_write_comment").textContent = "Scrivi un commento!";
+    document.getElementById("form_write_sender").placeholder = "Mittente";
+    document.getElementById("TextArea").placeholder = "Commento";
     document.getElementById("form_send").textContent = "Invia";
+    $('#modal_header').empty();
+    $('#modal_header').append('Commento inviato!');
+    $('#modal_body').empty();
+    $('#modal_body').append("Ora devo solo approvarlo!" + "<br>" + "Generalmente lo faccio immediatamente." + "<br>" + "Puoi dargli un occhiata nella " + "<a href=\"http://matteoomicini.drink-web.eu/comments/\">" + "SEZIONE COMMENTI" + "</a>");
 }
 
 function toEnglish() {
     document.getElementById("header_comments").textContent="Comments";
-    document.getElementById("header_write_comment").textContent="Write a comment";
+    document.getElementById("header_write_comment").textContent="Write a comment!";
     document.getElementById("dropdownMenuButton").textContent="Theme";
     document.getElementById("arancio").textContent="Orange";
     document.getElementById("legno").textContent="Wood";
@@ -38,4 +42,9 @@ function toEnglish() {
     document.getElementById("form_write_sender").placeholder="Author";
     document.getElementById("TextArea").placeholder="Comment";
     document.getElementById("form_send").textContent = "Send";
+    $('#modal_header').empty();
+    $('#modal_header').append('Comment sent!');
+    $('#modal_body').empty();
+    $('#modal_body').append("But I have to approve it!" + "<br>" + "Generally i do it immediatly." + "<br>" + "You can take a look in the " + "<a href=\"http://matteoomicini.drink-web.eu/comments/\">" + "COMMENT SECTION" + "</a>");
 }
+

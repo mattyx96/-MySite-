@@ -39,7 +39,7 @@ function validate() {
             data: JSON.stringify(json),
             crossDomain: true,
             success: function () {
-                alert('comment sent, but I have to approve it! Generally i do it immediatly, you can take a look here: http://matteoomicini.drink-web.eu/comments/');
+                $('#myModal').modal("show");
                 $("#TextArea").val("");
                 $("#Sender").val("");
             },
