@@ -13,27 +13,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/standard.css">
 
-    <style>
-        @font-face {
-            font-family: Delicious;
-            src: url('fonts/Lovelo_Black.otf');
-        }
-
-        h2 {
-            font-family: Delicious
-        }
-
-        span {
-            font-family: Delicious;
-        }
-    </style>
 </head>
 <body>
 
 <section id="me">
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand" href="#">Me</a>
+            <a class="navbar-brand" href="http://matteoomicini.drink-web.eu">Home</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,25 +28,36 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://matteoomicini.drink-web.eu/comments" id="header_comments">Commenti</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="http://matteoomicini.drink-web.eu/comments">Comments</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Disabled</a>
+                        <a class="nav-link" href="#comment" id="header_write_comment">Scrivi un commento!</a>
                     </li>
                 </ul>
+
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a onclick="toItalian()">
+                            <img id="italian" src="./img/icons/italy.svg"/>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a onclick="toEnglish()">
+                            <img id="english" src="./img/icons/english.svg"/>
+                        </a>
+                    </li>
+                </ul>
+
                 <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Tema
                     </button>
                     <div class="dropdown-menu" aria-labelledby="Tema">
-                        <a class="dropdown-item" href="index.html">Standard</a>
-                        <a class="dropdown-item" href="orange.html">Orange</a>
-                        <a class="dropdown-item" href="brown.html">Wood</a>
+                        <a class="dropdown-item" href="index.html" >Standard</a>
+                        <a class="dropdown-item disabled" href="#" id="arancio">Arancio</a>
+                        <a class="dropdown-item disabled" href="#" id="legno">Legno</a>
                     </div>
                 </div>
             </div>
@@ -104,10 +101,10 @@
                 <img class="rounded-circle" src="img/super-flat-avatar_yellow_background.png" id="avatar">
                 <div class="container" id="name">
                     <h2 class="lead" id="nome">Matteo Omicini</h2>
-                    <span class="lead" id="dev">Developer</span>
+                    <span class="lead bold" id="dev">Developer</span>
                 </div>
                 <div class="text-center">
-                    <button type="button" class="btn btn-primary" id="cv">Download CV</button>
+                    <a type="button" href="download/cv_matteo_omicini.pdf" class="btn btn-primary" id="cv"> Download CV </a>
                 </div>
             </div>
         </div>
@@ -119,74 +116,136 @@
     <div class="row">
         <div class="col-sm-8">
 
-            <p class="lead" id="description">Questo codice esegue perfettamente ciò per cui è stato scritto: rispondere
-                con “Hello
-                World” a qualsiasi chiamata effettuata sulla porta 1337.
+            <p class="lead" id="description">
+                <span class="bold" id="desc_1">Benvenuto!</span>
+                <br>
+                <br>
+                <span id="desc_2">Mi chiamo Matteo, sono uno studente universitario e uno sviluppatore software.</span>
+                <br>
+                <br>
+                <span id="desc_3">Mi piace cimentarmi sia nel front-end sia nel back-end e mi piace lavorare in team.
+                Sono aperto a qualunque linguaggio di programmazione/framework e imparo in fretta!
+                </span>
+                <br>
+                <br>
+                <span id="desc_4">Adoro e seguo tutto quel che riguarda la tecnologia dall'hardware al software, mi piace e mi affascina il design.</span>
+                <br>
+                <br>
+                <span class="bold" id="desc_5">(Lascia un commento </span> <span id="desc_6">anche anonimo</span> <span class="bold" id="desc_7"> qui in basso!)</span>
 
-                Le applicazioni web però non sono così banali e, solitamente, espongono una serie di “punti di
-                accesso” per le diverse funzionalità offerte. Questi punti di accesso vengono tecnicamente tradotti
-                in gergo tecnico nel concetto di URL. A seconda dell’URL invocato dell’utente, manualmente, tramite
-                un link, un form o una chiamata AJAX, l’applicazione si comporterà diversamente.
-
-                Il primo componente che analizzeremo sarà appunto un dispatcher che permetterà di differenziare le
-                chiamate effettuate dall’utente. Questo componente, data la sua fondamentale importanza in qualsiasi
-                progetto, verrà sviluppato sotto forma di modulo permettendone quindi un rapido riutizzo in più
-                applicazioni.
-
-                Il componente in questione è disponibile sia su NPM che su GitHub ed è stato scritto dal
-                sottoscritto proprio allo scopo di essere utilizzato nel concreto. Il componente offre anche una
-                funzionalità che non verrà approfondita in questa guida, i filtri, ma che sono facilmente
-                comprensibili una volta analizzato il modulo.</p>
+            </p>
 
         </div>
 
         <div class="col-sm-4">
-            <p class="lead" id="skills">Questo codice esegue perfettamente ciò per cui è stato scritto: rispondere con
-                “Hello
-                World” a qualsiasi chiamata effettuata sulla porta 1337.
+            <div class="lead" id="skills">
 
-                Le applicazioni web però non sono così banali e, solitamente, espongono una serie di “punti di
-                accesso” per le diverse funzionalità offerte. Questi punti di accesso vengono tecnicamente tradotti
-                in gergo tecnico nel concetto di URL. A seconda dell’URL invocato dell’utente, manualmente, tramite
-                un link, un form o una chiamata AJAX, l’applicazione si comporterà diversamente.
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <img src="img/icons/java.svg"/>
+                    </li>
+                    <li class="list-group-item">
+                        <img src="img/icons/react.svg"/>
+                    </li>
+                    <li class="list-group-item">
+                        <img src="img/icons/2000px-JetBrains_Logo_2016.svg.png"/>
+                    </li>
+                </ul>
 
-                Il primo componente che analizzeremo sarà appunto un dispatcher che permetterà di differenziare le
-                chiamate effettuate dall’utente. Questo componente, data la sua fondamentale importanza in qualsiasi
-                progetto, verrà sviluppato sotto forma di modulo permettendone quindi un rapido riutizzo in più
-                applicazioni.
+                <div class="text-center">
+                    <button class="btn btn-warning" id="collapseButton1" onclick="hide()">Mostra Altro</button>
+                </div>
 
-                Il componente in questione è disponibile sia su NPM che su GitHub ed è stato scritto dal
-                sottoscritto proprio allo scopo di essere utilizzato nel concreto. Il componente offre anche una
-                funzionalità che non verrà approfondita in questa guida, i filtri, ma che sono facilmente
-                comprensibili una volta analizzato il modulo.</p>
+            </div>
         </div>
     </div>
 
-    <form>
+    <div class="collapse multi-collapse" id="otherSkills">
 
-        <label for="TextArea">Write a comment!</label>
-        <input type="text" class="form-control lead" placeholder="Author" id="Sender">
-        <hr>
-        <div class="form-group">
-            <textarea class="form-control lead" id="TextArea" placeholder="Comment" rows="6"></textarea>
-        </div>
+        <div id="skills">
 
-        <div style="text-align: center">
-            <button type="button" class="btn btn-outline-dark" onclick="validate()">Send</button>
+            <ul class="nav justify-content-center">
+
+                <li class="list-group-item">
+                    <img src="img/icons/javascript.svg"/>
+                </li>
+                <li class="nav-item">
+                    <img src="img/icons/bootstrap.svg"/>
+                </li>
+                <li class="nav-item">
+                    <img src="img/icons/php.svg"/>
+                </li>
+                <li class="nav-item">
+                    <img src="img/icons/node.svg"/>
+                </li>
+                <li class="nav-item">
+                    <img src="img/icons/github.svg"/>
+                </li>
+                <li class="nav-item">
+                    <img src="img/icons/database.svg"/>
+                </li>
+                <li class="nav-item">
+                    <img src="img/icons/android.svg"/>
+                </li>
+            </ul>
+            <div class="text-center">
+                <button class="btn btn-warning" id="collapseButton2" onclick="hide()">Nascondi</button>
+            </div>
         </div>
-    </form>
+    </div>
+
+    <button type="button" class="btn btn-info btn-lg" id="alertbox">Click here</button>
+
+
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modal Header</h4>
+                </div>
+                <div class="modal-body">
+                    <p id="error"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <section id="comment">
+        <form>
+            <label for="TextArea" id="form_write_comment">Scrivi un commento!</label>
+            <input type="text" class="form-control lead" id="form_write_sender" placeholder="Author" id="Sender">
+            <hr>
+            <div class="form-group">
+                <textarea class="form-control lead" id="TextArea" placeholder="Comment" rows="6"></textarea>
+            </div>
+
+            <div style="text-align: center">
+                <button type="button" class="btn btn-outline-dark" onclick="validate()" id="form_send">Invio</button>
+            </div>
+        </form>
+    </section>
 </div>
 
+
 <div id="footer">
-    <div class="container">
-        <p class="footer-block">Place sticky footer content here.</p>
+    <div class="container" style="text-align: center">
+        <img src="img/logopng.png" id="logo"/>
     </div>
 </div>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+<script
+        src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
@@ -194,7 +253,9 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="js/form_validation.js"></script>
+<script src="js/collapseButton.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/change_language.js"></script>
 </body>
 </html>

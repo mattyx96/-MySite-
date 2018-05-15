@@ -7,6 +7,19 @@ body {
     background: #34495e;
 }
 
+@font-face {
+    font-family: Delicious;
+    src: url('fonts/Lovelo_Black.otf');
+}
+
+h2 {
+    font-family: Delicious
+}
+
+.bold {
+    font-family: Delicious;
+}
+
 .navbar-brand {
     font-size: 3rem;
     line-height: 50px;
@@ -68,6 +81,7 @@ form{
     background-color:#E6E23C;
     padding: 20px;
     margin-bottom: 50px;
+    margin-top: 20px;
 }
 
 .form-control{
@@ -130,6 +144,15 @@ label{
     margin-left: 15px;
 }
 
+#italian{
+    max-width: 30px;
+    max-height: 30px;
+}
+#english{
+    max-width: 30px;
+    max-height: 30px;
+}
+
 #facebook{
     max-width: 50px;
     max-height: 50px;
@@ -157,7 +180,7 @@ label{
 }
 
 #description {
-    padding: 20px;
+    padding: 25px;
     background: #1abc9c;
 }
 
@@ -166,8 +189,51 @@ label{
     padding: 20px;
 }
 
+.list-group-item{
+    background-color: transparent;
+    text-align: center;
+    border: 0px;
+}
+
+.nav-item{
+    background-color: transparent;
+    text-align: center;
+    border: 0px;
+}
+
+#collapseButton{
+    margin: 5px;
+}
+
+.list-group-item img{
+    height: 100px;
+    width: 100px;
+}
+
+.nav-item img{
+    height: 100px;
+    width: 100px;
+}
+
+#logo{
+    height: 100px;
+    width: 100px;
+}
+
+#collapseButton1{
+    margin-top: 10px;
+}
+
 #footer {
-    padding-bottom: 150px;
+    padding-bottom: auto;
     background-color: #2c3e50;
 }
+
+#logo{
+    text-align: center;
+    width: 20%;
+    height: auto;
+    margin: 30px;
+}
+
 

@@ -24,7 +24,7 @@ function validate() {
             comment: comment,
             sender: sender,
             address: ip
-        }
+        };
 
         if (adblock){
             return;
@@ -39,7 +39,7 @@ function validate() {
             data: JSON.stringify(json),
             crossDomain: true,
             success: function () {
-                alert('comment sent, take a look!');
+                alert('comment sent, but I have to approve it! Generally i do it immediatly, you can take a look here: http://matteoomicini.drink-web.eu/comments/');
                 $("#TextArea").val("");
                 $("#Sender").val("");
             },
